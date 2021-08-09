@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block style %}
+    <style>
+        .login-style {
+            width:350px;
+            margin:auto
+        }
+    </style>
+
+{% endblock  %}
+
+{% block body %}
+    <div class="container mt-5 login-style">
+        <h1>Вход</h1>
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type = "submit" class="btn btn-primary">Вход</button>
+        </form>
+{#         <p class="mt-5">Or <a href="{% url 'register' %}">Create New Account </a></p>#}
+
+    </div>
+
+{% endblock %}

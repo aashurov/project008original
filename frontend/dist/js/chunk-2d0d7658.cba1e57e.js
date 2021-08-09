@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0d7658"],{7746:function(e,n,a){"use strict";a.r(n);var d=a("7a23"),t=Object(d["H"])("data-v-5ed6a524"),c=t((function(e,n,a,t,c,o){return Object(d["q"])(),Object(d["d"])("h1",null,"Not found ishi blya ")})),o={name:"404"};o.render=c,o.__scopeId="data-v-5ed6a524";n["default"]=o}}]);
+//# sourceMappingURL=chunk-2d0d7658.cba1e57e.js.map

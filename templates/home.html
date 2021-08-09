@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load render_bundle from webpack_loader %}
+
+
+{% block body %}
+HOME
+<div id="app">
+{% render_bundle 'app' %}
+{#{% url 'accounts/logout/' %}#}
+    <a href="accounts/logout/">asdas</a>
+
+</div>
+
+
+{% endblock %}
