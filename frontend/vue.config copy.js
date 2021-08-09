@@ -1,9 +1,8 @@
 const BundleTracker = require("webpack-bundle-tracker");
 
 module.exports = {
-    publicPath: "http://0.0.0.0:8080/",
+    // publicPath: "http://127.0.0.1:8080/",
     outputDir: './dist/',
-
     chainWebpack: config => {
 
         config.optimization
@@ -11,18 +10,28 @@ module.exports = {
 
         config
             .plugin('BundleTracker')
-            .use(BundleTracker, [{filename: '../frontend/webpack-stats.json'}])
+            .use(BundleTracker, [{filename: './webpack-stats.json'}])
+
+        config.output
+            .filename('bundle.js')
+
+
 
         config.resolve.alias
             .set('__STATIC__', 'static')
 
         config.devServer
-            .public('http://0.0.0.0:8080')
-            .host('0.0.0.0')
+
+            .public('http://127.0.0.1:8080')
+            .host('127.0.0.1')
             .port(8080)
             .hotOnly(true)
             .watchOptions({poll: 1000})
             .https(false)
+            .disableHostCheck(true)
             .headers({"Access-Control-Allow-Origin": ["\*"]})
-            }
-        };
+
+    },
+
+
+};
